@@ -1,0 +1,14 @@
+(base) karthiks-MacBook-Pro:tcp karthikkathirvel$ python3 tcp_server.py
+Server started at port:5000
+Connected to : 127.0.0.1 : 51526
+received data:A:ping
+received data:A:ping
+received data:A:ping
+No data received.
+Connected to : 127.0.0.1 : 51528
+received data:B:ping
+received data:B:ping
+received data:B:ping
+received data:B:ping
+received data:B:ping
+No data received.

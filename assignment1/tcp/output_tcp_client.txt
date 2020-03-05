@@ -1,0 +1,21 @@
+(base) karthiks-MacBook-Pro:tcp karthikkathirvel$ python3 tcp_client.py A 10 3
+sending data: ping
+received data: pong
+sending data: ping
+received data: pong
+sending data: ping
+received data: pong
+done bye
+
+(base) karthiks-MacBook-Pro:tcp karthikkathirvel$ python3 tcp_client.py B 10 5
+sending data: ping
+received data: pong
+sending data: ping
+received data: pong
+sending data: ping
+received data: pong
+sending data: ping
+received data: pong
+sending data: ping
+received data: pong
+done bye
