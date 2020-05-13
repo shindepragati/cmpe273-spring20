@@ -11,13 +11,13 @@ The more hash functions we use it makes the bloom filter slow and it gets fills 
 
 Best k hashes for one millio n keys:
 
-**Given:
+Given:
       
     n: 1M 
 
     p: suppose false positive rate is 0..1 means 0.01 for 1%
 
-**Find:
+Find:
 
     m: bits values
 
@@ -39,7 +39,7 @@ Best k hashes for one millio n keys:
 
 when p is 0.02 
 
-**Calculation:
+Calculation:
 
     m = -1,000,000*ln(0.02) / (ln(2)^2) = 3912023 / 0.48045 =  8142414 bits (1017 kB)
 
