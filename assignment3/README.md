@@ -47,4 +47,4 @@ Calculation:
 
 
 
-So the m and k value is depends upon the value of p we are going to use.
+So the m and k value is depends upon the value of p means probabilities of false positives we are going to use.
