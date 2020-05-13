@@ -11,39 +11,39 @@ The more hash functions we use it makes the bloom filter slow and it gets fills 
 
 Best k hashes for one millio n keys:
 
-Given:
+**Given:
+      
+    n: 1M 
 
-n: 1M 
+    p: suppose false positive rate is 0..1 means 0.01 for 1%
 
-p: suppose false positive rate is 0..1 means 0.01 for 1%
+**Find:
 
-Find:
+    m: bits values
 
-m: bits values
+    k: the number of hashes
 
-k: the number of hashes
+**The formulas:
+    
+    m = -n*ln(p) / (ln(2)^2) the number of bits
 
-The formulas:
+    k = m/n * ln(2) the number of hash functions
 
-m = -n*ln(p) / (ln(2)^2) the number of bits
+**Calculation:
 
-k = m/n * ln(2) the number of hash functions
+    m = -1,000,000*ln(0.01) / (ln(2)^2) = -4605170 / 0.48045 =  9585118 bits (576 kB)
 
-Calculation:
-
-m = -1,000,000*ln(0.01) / (ln(2)^2) = -4605170 / 0.48045 =  9585118 bits (576 kB)
-
-k = m/n * ln(2) = 9585118/1,000,000 * 0.693147 = 6.643 hash functions ==> almost 7 hash functions are required
+    k = m/n * ln(2) = 9585118/1,000,000 * 0.693147 = 6.643 hash functions ==> almost 7 hash functions are required
 
 ------------------------------------------------------------------------------------------------------------------------
 
 when p is 0.02 
 
-Calculation:
+**Calculation:
 
-m = -1,000,000*ln(0.02) / (ln(2)^2) = 3912023 / 0.48045 =  8142414 bits (1017 kB)
+    m = -1,000,000*ln(0.02) / (ln(2)^2) = 3912023 / 0.48045 =  8142414 bits (1017 kB)
 
-k = m/n * ln(2) = 8142414/1,000,000 * 0.693147 = 5.64 hash functions ==> almost 6 hash functions are required
+    k = m/n * ln(2) = 8142414/1,000,000 * 0.693147 = 5.64 hash functions ==> almost 6 hash functions are required
 
 
 
