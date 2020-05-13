@@ -19,12 +19,12 @@ class LRUCache(object):
     def insertItem(self, item):
         """Insert new items to cache"""
         if item.key in hashdict:
-            print(item_list)
-            # Move the existing item to the head of item_list.
-            item_index = item_list.index(item)
-            item_list[:] = item_list[:item_index] + item_list[item_index+1:]
-            item_list.insert(0, item)
-         
+            if(item in item_list):
+                print(item_list)
+                # Move the existing item to the head of item_list.
+                item_index = item_list.index(item)
+                item_list[:] = item_list[:item_index] + item_list[item_index+1:]
+                item_list.insert(0, item)
         else:
             # Remove the last item if the length of cache exceeds the upper bound.
             if len(item_list) >= self.length:
@@ -56,6 +56,5 @@ class LRUCache(object):
             del item_list[item_index]
             return True
         #print(f"Cache-->Number of Users={len(item_list)}\nNumber of Users Cached={len(hash)}")
-
 
 

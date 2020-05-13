@@ -5,7 +5,7 @@ from node_ring import NodeRing
 from sample_data import USERS
 from server_config import NODES
 from pickle_hash import serialize_GET, serialize_PUT, serialize_DELETE,deserialize
-from lru_cache import *
+from lrucache import lru_cache
 from bloom_filter import BloomFilter 
 
 BUFFER_SIZE = 1024
@@ -61,6 +61,7 @@ class UDPClient():
                 ring = NodeRing(NODES)
                 fix_me_server_id = NODES.index(ring.get_node(key))
                 response = udp_clients[fix_me_server_id].send(data_bytes)
+                print(f"Server GET--->{response}")  
                 return response 
         return None
 

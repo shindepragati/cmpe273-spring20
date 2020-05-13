@@ -1,4 +1,4 @@
-from lru_cache import lru_cache
+from lrucache import lru_cache
 
 INVOKE_COUNT = 0
 
@@ -19,11 +19,10 @@ def test_get_data(keys):
         result = get_data(x)
         print(result)
     print(f'Num of function calls:{len(keys)}')
-
   
 if __name__=='__main__':
     print(f'fibonacci(6)={fibonacci(6)}\n')
     test_get_data([1, 2, 3, 4, 1, 2, 3, 4, 5, 6])
     print(f'Num of cache misses:{INVOKE_COUNT}')
     print(get_data(5))
-    assert INVOKE_COUNT == 6
+   
