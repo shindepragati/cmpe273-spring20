@@ -23,13 +23,13 @@ Find:
 
     k: the number of hashes
 
-**The formulas:
+The formulas:
     
     m = -n*ln(p) / (ln(2)^2) the number of bits
 
     k = m/n * ln(2) the number of hash functions
 
-**Calculation:
+Calculation:
 
     m = -1,000,000*ln(0.01) / (ln(2)^2) = -4605170 / 0.48045 =  9585118 bits (576 kB)
 
